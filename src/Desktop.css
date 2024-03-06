@@ -1,0 +1,316 @@
+.frame-child {
+    width: 62px;
+    position: relative;
+    border-radius: 50%;
+    height: 62px;
+    object-fit: cover;
+  }
+  .mapconnect {
+    position: undefined;
+    display: inline-block;
+    width: 56px;
+    margin-top: 7px;
+  }
+  .frame {
+    position: absolute;
+    top: 45px;
+    left: 25px;
+    width: 239px;
+    height: 62px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0 17px;
+  }
+  .log-in {
+    position: relative;
+    font-size: var(--font-size-6xl);
+    font-family: var(--font-jockey-one);
+    color: var(--color-white);
+    text-align: left;
+  }
+  .frame1 {
+    cursor: pointer;
+    border: 0;
+    padding: 0 32px;
+    background-color: #646161;
+    position: absolute;
+    top: 42px;
+    left: 1020px;
+    border-radius: var(--br-mini);
+    width: 142px;
+    height: 41px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .sign-up1 {
+    position: relative;
+    font-size: var(--font-size-6xl);
+    font-family: var(--font-jockey-one);
+    color: var(--color-black);
+    text-align: left;
+  }
+  .frame2 {
+    cursor: pointer;
+    border: 0;
+    padding: 0 31px;
+    background-color: #e4d6d6;
+    position: absolute;
+    top: 42px;
+    left: 1124px;
+    border-radius: var(--br-mini);
+    width: 138px;
+    height: 41px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .mapconnect-maps {
+    margin: 0;
+  }
+  .span {
+    color: var(--color-gray-100);
+  }
+  .the-ultimate-solution-to-conne {
+    margin: 0;
+    font-size: 50px;
+    color: #85818d;
+  }
+  .mapconnect-maps-the-container {
+    position: absolute;
+    top: 169px;
+    left: 361px;
+    font-family: var(--font-jomhuria);
+    font-size: 140px;
+  }
+  .desktop-1-child,
+  .desktop-1-item {
+    position: absolute;
+    border-radius: var(--br-21xl);
+  }
+  .desktop-1-child {
+    top: 438px;
+    left: 45px;
+    background-color: var(--color-gray-100);
+    border: 10px solid var(--color-snow);
+    box-sizing: border-box;
+    width: 1170px;
+    height: 505px;
+  }
+  .desktop-1-item {
+    top: 457px;
+    left: 748px;
+    width: 453px;
+    height: 460px;
+    object-fit: cover;
+  }
+  .embark-on-a {
+    position: absolute;
+    top: 631px;
+    left: 85px;
+    color: var(--color-white);
+    display: inline-block;
+    width: 647px;
+    height: 411px;
+  }
+  .desktop-1-inner {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: #6e95db;
+    position: absolute;
+    top: 499px;
+    left: 244px;
+    border-radius: var(--br-xl);
+    width: 260px;
+    height: 74px;
+  }
+  .get-started {
+    position: absolute;
+    top: 512px;
+    left: 303px;
+    color: var(--color-white);
+  }
+  .frame-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1474px;
+    height: 777px;
+  }
+  .use-our-polygon {
+    position: absolute;
+    top: 221px;
+    left: 141px;
+    display: inline-block;
+    width: 562px;
+  }
+  .search-a-specific {
+    position: absolute;
+    top: 112px;
+    left: 141px;
+    font-size: 60px;
+    color: var(--color-white);
+  }
+  .frame-inner {
+    position: absolute;
+    top: 62px;
+    left: 737px;
+    border-radius: var(--br-11xl);
+    width: 524px;
+    height: 463px;
+    object-fit: cover;
+  }
+  .ellipse-div {
+    position: absolute;
+    top: 188px;
+    left: 963px;
+    border-radius: 50%;
+    background-color: rgba(193, 189, 226, 0.4);
+    border: 1px solid #464ccf;
+    box-sizing: border-box;
+    width: 252px;
+    height: 227px;
+  }
+  .frame5 {
+    width: 1474px;
+    position: relative;
+    height: 777px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .frame4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1475px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .integrate-your-buyer-or-seller {
+    margin-block-start: 0;
+    margin-block-end: 40px;
+  }
+  .and-experience-seamless {
+    line-height: 140%;
+    text-transform: lowercase;
+    color: var(--color-gray-100);
+  }
+  .and-experience-seamless-perfor {
+    margin: 0;
+    font-size: var(--font-size-16xl);
+  }
+  .integrate-your-buyer-container {
+    width: 1226px;
+    position: relative;
+    display: inline-block;
+  }
+  .frame6 {
+    position: absolute;
+    top: 955px;
+    left: 36px;
+    width: 1226px;
+    height: 202px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    font-size: 70px;
+    color: var(--color-black);
+  }
+  .rectangle-div {
+    position: absolute;
+    top: 0;
+    left: 1.1px;
+    background-color: #220f5a;
+    width: 1474px;
+    height: 349px;
+    transform: rotate(0.19deg);
+    transform-origin: 0 0;
+  }
+  .line-div {
+    position: absolute;
+    top: 53.4px;
+    left: 527.6px;
+    border-right: 4px solid var(--color-white);
+    box-sizing: border-box;
+    width: 4px;
+    height: 244px;
+  }
+  .ellipse-icon {
+    position: absolute;
+    top: 55.4px;
+    left: 86.6px;
+    border-radius: 50%;
+    width: 62px;
+    height: 62px;
+    object-fit: cover;
+  }
+  .apconnect {
+    font-size: var(--font-size-16xl);
+  }
+  .mapconnect1 {
+    position: absolute;
+    top: 55.4px;
+    left: 183.6px;
+  }
+  .about-us-faq-container {
+    position: absolute;
+    top: 70.4px;
+    left: 630.6px;
+    font-size: var(--font-size-16xl);
+  }
+  .rectangle-parent {
+    position: absolute;
+    top: 1876px;
+    left: 0;
+    width: 1475.1px;
+    height: 353.8px;
+    font-size: 45px;
+    color: var(--color-white);
+  }
+  .frame-icon,
+  .frame3 {
+    position: absolute;
+    top: 1204px;
+    left: 0;
+    width: 1429px;
+    height: 626px;
+    overflow: hidden;
+  }
+  .frame3 {
+    top: 1071px;
+    left: -1px;
+    width: 1281px;
+    height: 2230px;
+    color: #cec8c8;
+  }
+  .desktop-1 {
+    width: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    height: 3301px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-16xl);
+    color: var(--color-gray-100);
+    font-family: var(--font-jockey-one);
+  }
+  .desktop-1:active {
+    display: flex;
+  }
+  
