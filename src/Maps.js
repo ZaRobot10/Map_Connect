@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
-import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import L from "leaflet";
+import {React, useEffect} from 'react';
+import { MapContainer, TileLayer, Marker, Popup, useMap} from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
 
 const icon = L.icon({
-  iconUrl: "./placeholder.png",
-  iconSize: [38, 38],
-});
+    iconUrl: "./placeholder.png",
+    iconSize: [48, 38],
+  });
 
-const position = [51.505, -0.09];
+const position = [28.6139, 77.2090];
 
 function ResetCenterView(props) {
   const { selectPosition } = props;
@@ -29,21 +30,27 @@ function ResetCenterView(props) {
   return null;
 }
 
+
 export default function Maps(props) {
   const { selectPosition } = props;
   const locationSelection = [selectPosition?.lat, selectPosition?.lon];
-
   return (
-    <MapContainer
-      center={position}
-      zoom={8}
-      style={{ width: "100%", height: "100%" }}
-    >
+    <MapContainer center={position} zoom={13} style={{ width: '100%', height: '100%' }}>
+      {/* OpenStreetMap TileLayer */}
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://api.maptiler.com/maps/basic/256/{z}/{x}/{y}.png?key={YOU_KEY}"
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {selectPosition && (
+
+      {/* Google Streets TileLayer */}
+      <TileLayer
+        attribution='&copy; Google'
+        url="http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}"
+        maxZoom={20}
+        subdomains={['mt0', 'mt1', 'mt2', 'mt3']}
+      />
+
+{selectPosition && (
         <Marker position={locationSelection} icon={icon}>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
