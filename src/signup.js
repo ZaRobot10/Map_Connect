@@ -1,10 +1,27 @@
 import React, { useState } from "react";
 import { auth } from "./firebase/firebase";
-
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useHistory } from 'react-router-dom';
 
 const Desktop = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const history = useHistory();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      console.log(userCredential);
+      const user = userCredential.user;
+      localStorage.setItem('token', user.accessToken);
+      localStorage.setItem('user', JSON.stringify(user));
+      history.push("/login");
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const handleRegister = async () => {
     // try {
@@ -19,8 +36,8 @@ const Desktop = () => {
   };
   
 
-  const handleChangeEmail = (e) => {
-    setEmail(e.target.value);
+  const handleChangeEmail =  (e) => {
+    setEmail(e.target.value) ;
   };
 
   const handleChangePassword = (e) => {
@@ -77,7 +94,7 @@ const Desktop = () => {
       />
       <button
         className="absolute top-[812px] left-[191px] transform -translate-x-1/2 cursor-pointer bg-blue-500 text-white rounded-none w-64 h-12"
-        onClick={handleRegister}
+        onClick={handleSubmit}
       >
         REGISTER
       </button>

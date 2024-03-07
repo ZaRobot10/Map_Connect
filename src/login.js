@@ -1,18 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link , useHistory } from "react-router-dom";
+import { auth } from "./firebase/firebase";
 import "./global.css";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const history = useHistory();
+
   const onSignUpClick = () => {
     // Handle sign up click
   };
 
-  const onRectangleLinkClick = () => {
-    // Handle rectangle link click
-  };
+  const onRectangleButtonClick = async (e) => {
+    e.preventDefault();
 
-  const onRectangleButtonClick = () => {
-    // Handle rectangle button click
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email.trim(), password);
+      const user = userCredential.user;
+      localStorage.setItem('token', user.accessToken);
+      localStorage.setItem('user', JSON.stringify(user));
+      history.push("/maps");
+    } catch (error) {
+      console.error(error.code, error.message);
+    }
   };
 
   return (
@@ -41,11 +53,11 @@ const Login = () => {
       </Link>
       <div
         className="cursor-pointer bg-mediumblue rounded-[20px] w-[242px] h-[66px] absolute top-[584px] left-[147px]"
-        onClick={onRectangleLinkClick}
+        onClick={onRectangleButtonClick}
       >
         <Link
           to="/map"
-          className="cursor-pointer bg-mediumblue rounded-[20px] w-[242px] h-[66px] block"
+          className="cursor-pointer bg-mediumblue rounded-[20px] w-[500px] h-[66px] block"
         ></Link>
       </div>
       <div
