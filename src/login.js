@@ -27,7 +27,7 @@ const Login = () => {
       </div>
       <Link
         className="cursor-pointer text-darkblue absolute top-[667px] left-[389px] text-darkblue"
-        to="/"
+        to="/signUp"
         onClick={onSignUpClick}
         style={{ textDecoration: "none" }}
       >
@@ -44,7 +44,7 @@ const Login = () => {
         onClick={onRectangleLinkClick}
       >
         <Link
-          to="/after-login"
+          to="/map"
           className="cursor-pointer bg-mediumblue rounded-[20px] w-[242px] h-[66px] block"
         ></Link>
       </div>

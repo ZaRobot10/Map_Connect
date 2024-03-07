@@ -7,13 +7,15 @@ const Desktop = () => {
   const [password, setPassword] = useState("");
 
   const handleRegister = async () => {
-    try {
-      await auth.createUserWithEmailAndPassword(email, password);
-      // Registration successful, redirect or update UI as needed
-      window.location.href = "/after-login"; // Redirect to after-login page
-    } catch (error) {
-      console.error("Registration error:", error.message);
-    }
+    // try {
+    //   await auth.createUserWithEmailAndPassword(email, password);
+    //   // Registration successful, redirect or update UI as needed
+    //   window.location.href = "/after-login"; // Redirect to after-login page
+    // } catch (error) {
+    //   console.error("Registration error:", error.message);
+    // }
+
+    window.location.href = "/map"; // Redirect to after-login page
   };
   
 
@@ -26,7 +28,7 @@ const Desktop = () => {
   };
 
   const handleFrameButtonClick = () => {
-    window.location.href = "/desktop-1";
+    window.location.href = "/home";
   };
 
   const handleLoginHereClick = () => {
@@ -35,12 +37,14 @@ const Desktop = () => {
 
   return (
     <div className="w-full relative bg-white h-[1024px] overflow-hidden text-left text-6xl text-black font-abeezee">
-      <button
-        className="absolute top-[67px] left-[30px] mix-blend-normal cursor-pointer bg-primary text-white rounded-none w-64 h-12"
-        onClick={handleFrameButtonClick}
-      >
-        HOME
-      </button>
+    <button
+  className="relative cursor-pointer bg-gray-800 text-white rounded-none w-96 h-16 pl-8 flex items-center"
+  onClick={handleFrameButtonClick}
+>
+  <img src="../public/image-2@2x.png" alt="" className="mr-4" />
+  HOME
+</button>
+
       <img
         className="absolute top-[116px] left-[720px] w-[687px] h-[810px] object-cover"
         alt=""
@@ -72,7 +76,7 @@ const Desktop = () => {
         type="password"
       />
       <button
-        className="absolute top-[812px] left-[50%] transform -translate-x-1/2 cursor-pointer bg-blue-500 text-white rounded-none w-64 h-12"
+        className="absolute top-[812px] left-[191px] transform -translate-x-1/2 cursor-pointer bg-blue-500 text-white rounded-none w-64 h-12"
         onClick={handleRegister}
       >
         REGISTER
